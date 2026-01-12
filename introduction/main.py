@@ -21,4 +21,4 @@ def about():
     return render_template("about.html")
 
 
-app.run(debug = True)
+app.run(debug = True) # DEBUG = TRUE ENABLES DEBUG MODE WITH MULTIPLE FEATURES LIKE AUTOMATIC RELOADING WHICH ARE BENIFICIAL WHILE DEVELOPING 
