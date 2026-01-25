@@ -1,3 +1,5 @@
+{% extends "loginbase.html" %}
+
 {% block title %}
 Login
 {% endblock %}
@@ -9,7 +11,7 @@ Login
     <p>Sign in to your account</p>
 </div>
 
-<form>
+<form action="/" method="post" class="login-form">
     <div class="form-group">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -29,7 +31,7 @@ Login
         <a href="#forgot">Forgot Password?</a>
     </div>
 
-    <button type="submit" class="login-btn">Login</button>
+    <button type="submit" value="submit" class="login-btn">Login</button>
 
     <div class="signup-link">
         Don't have an account? <a href="#signup">Sign up here</a>
