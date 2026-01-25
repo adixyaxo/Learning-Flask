@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index page</title>
-    <link rel="stylesheet" href="static/style.css">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <!-- This wont work because the static folder is now assets and the static_url_path is /public -->
+    <!-- SO TO AVOID CONFUSION WE DO THE FOLLOWING TO GENERATE THE URL DYNAMICALLY-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
