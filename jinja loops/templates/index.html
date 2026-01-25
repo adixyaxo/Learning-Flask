@@ -13,10 +13,15 @@
     <!-- List of all the students with their respective marks -->
     <h1>Class 10 Student Marks</h1>
     <ul>
-        <li>Alice: {{ marks["Alice"] }}</li>
-        <li>Bob: {{ marks["Bob"] }}</li>
-        <li>Charlie: {{ marks["Charlie"] }}</li>
-        <li>Diana: {{ marks["Diana"] }}</li>
+        {#THIS IS HOW WE WRITE A COMMENT IN JINJA #}
+        {% for student, score in marks.items() %}
+        <li>
+            {{ student }}: {{ score }}
+            {% if score>=90 %}
+            He is a good student
+            {% endif %}
+        </li>
+        {% endfor %}
     </ul>
 </body>
 
