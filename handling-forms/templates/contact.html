@@ -1,0 +1,64 @@
+<!-- This is a basic contact page in html which has a form for users to submit their contact information like name email and message with a submit button and basic css -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Us</h2>
+    <form action="/" method="post">
+        <label for="name">Name:</label><br>
+        <input name="name" type="text" id="name" name="name">
+
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input name="email" type="email" id="email" name="email">
+
+        <br><br>
+
+        <label for="message">Message:</label>
+
+        <br>
+
+        <textarea name="message" id="message"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
