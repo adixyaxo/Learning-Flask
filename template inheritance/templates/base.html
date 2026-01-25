@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <!-- This is a basic nav bar with home about and contact with some css embedded -->
+    <nav>
+        <ul style="list-style-type: none; display: flex; gap: 20px; background-color: #f0f0f0; padding: 10px;">
+            <li><a href="/" style="text-decoration: none; color: #333;">Home</a></li>
+            <li><a href="/about" style="text-decoration: none; color: #333;">About</a></li>
+            <li><a href="/contact" style="text-decoration: none; color: #333;">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- This is a main body of inherited template which will be in every page with some css in it -->
+        <h1 style="color: #2c3e50; text-align: center;">Welcome to Our Website</h1>
+        <p style="font-size: 18px; line-height: 1.6; margin: 20px;">
+            This is a sample website to demonstrate template inheritance using Jinja. The navigation bar above is
+            consistent across all pages, providing easy access to Home, About, and Contact sections.
+        </p>
+    </main>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
