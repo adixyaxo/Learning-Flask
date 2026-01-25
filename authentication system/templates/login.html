@@ -37,8 +37,12 @@ Login
         Don't have an account? <a href="/register">Sign up here</a>
     </div>
 </form>
-{% endblock %}
 
+{% if message %}
 <script>
     alert("{{ message }}");
 </script>
+{% endif %}
+
+
+{% endblock %}
