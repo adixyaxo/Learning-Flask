@@ -10,7 +10,7 @@ def login():
         email = user_dict["email"]
         password = user_dict["password"]
         try:
-            for index,row in pd.read_csv(f"{email}.csv").itertuples():
+            for index,row in pd.read_csv(f"accounts\{email}.csv").itertuples():
                     if row["email"] == email and row["password"] == password:
                         return render_template("login.html",message="Login Successful")
                     else:
@@ -28,8 +28,7 @@ def register():
         username = user_dict["username"]
         print(user_dict)
         user_df = pd.DataFrame({"username":username,"email":email,"password":password},index=[0])
-        user_df.to_csv(f"{email}.csv",mode="a",header=False,index=False)
-        # Add registration logic here
+        user_df.to_csv(f"accounts\{email}.csv",mode="a",header=False,index=False)
         return redirect(url_for("login")) # Redirect to login after registration
     return render_template("register.html")
 
